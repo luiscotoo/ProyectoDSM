@@ -5,7 +5,7 @@ La aplicación MedOne facilita una mejor comunicación entre cliente/vendedor, b
 La existencia de farmacias siempre ha tenido un rol muy importante dentro de los mercados, por la venta de medicamentos y demás productos, en estos últimos dos años no ha sido la excepción, con el azote de la pandemia por el COVID-19, sin embargo, la atención y la venta de fármacos ha visto grandes cambios y con ellos la adopción de aplicaciones móviles cobró mucho valor, por lo tanto la aplicación MedOne solventa los problemas que se presentan actualmente brindando la facilidad de compra de medicamentos y suplementos en línea de una manera más intuitiva para los usuarios.
 
 ## Para comenzar :rocket:
-* [Documento - Primera Fase] 
+* Documento - Primera Fase [Enlace](https://github.com/luiscotoo/ProyectoDSM/blob/Fase1/Proyecto%20de%20Cátedra%20-%20DSM%20FI.pdf) :page_facing_up:
 
 ## Desarrolladores 🧑‍💻
 * **Luis Felipe Coto Arias (CA180315)** - :octocat: [luiscotoo](https://github.com/luiscotoo)
