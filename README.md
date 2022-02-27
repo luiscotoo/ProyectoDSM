@@ -7,8 +7,8 @@ Página web correspondiente al trabajo de investigación 1 de DSM. [Enlace](http
 ## Desarrolladores :pencil2:
 * **Luis Felipe Coto Arias (CA180315)** - :octocat: [luiscotoo](https://github.com/luiscotoo)
 * **Bryan Armando Salinas Sanchez - SS180731** - :octocat: [BassMan14](https://github.com/BassMan14)
-* **Katherine Dayanna Diaz Zúniga - D2180675** - :octocat: [Usuario] 
-* **Josué David Avelar Ponce - AP172038** - :octocat: [Usuario]
+* **Katherine Dayanna Diaz Zúniga - D2180675** - :octocat: [Dayandz](https://github.com/Dayandz)
+* **Josué David Avelar Ponce - AP172038** - :octocat: [JosueAvelar](https://github.com/JosueAvelar)
 * **Josue Alexander Chavez Garcia - CG172415** - :octocat: [Jalex-Cg](https://github.com/Jalex-Cg)
 
 ## Enlaces de interés :zap:
