@@ -14,7 +14,7 @@ La existencia de farmacias siempre ha tenido un rol muy importante dentro de los
 * **Josué David Avelar Ponce - AP172038** - :octocat: [JosueAvelar](https://github.com/JosueAvelar)
 * **Josue Alexander Chavez Garcia - CG172415** - :octocat: [Jalex-Cg](https://github.com/Jalex-Cg)
 
-# Página web 
+# Página web :globe_with_meridians:
 Página web de los desarrolladores [Enlace](https://nifty-lalande-d9f589.netlify.app/#) 
 
 ## Enlaces de interés :zap:
