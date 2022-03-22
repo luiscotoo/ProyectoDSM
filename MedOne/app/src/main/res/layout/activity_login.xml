@@ -18,7 +18,7 @@
         android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/tvBienvenida"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etEmail"
         android:layout_width="277dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTituloLogin" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/etPassword"
         android:layout_width="274dp"
         android:layout_height="51dp"
         android:layout_marginStart="100dp"
@@ -63,7 +63,7 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <TextView
         android:id="@+id/tvTituloLogin"
@@ -98,8 +98,9 @@
         android:layout_marginStart="103dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="103dp"
-        android:text="Registrarse"
         android:backgroundTint="#EF6A6A"
+        android:onClick="goRegister"
+        android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPreguntaCuenta" />

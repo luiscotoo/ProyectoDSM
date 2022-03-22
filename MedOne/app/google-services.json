@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "677793056329",
+    "project_id": "medone-6bdfa",
+    "storage_bucket": "medone-6bdfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677793056329:android:a9f18876801a7f28cf6198",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.medone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677793056329-rd7g35e1o1elpa17mk1defugqmd22d1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ6TyIjjowIPkQgxN9ka6J7apztpY1Pak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677793056329-rd7g35e1o1elpa17mk1defugqmd22d1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
