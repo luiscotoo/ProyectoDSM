@@ -16,5 +16,13 @@
             android:id="@+id/nav_servicios"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_servicios" />
+        <item
+            android:id="@+id/nav_ordenes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_ordenes" />
+        <item
+            android:id="@+id/nav_acercade"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_acercade" />
     </group>
 </menu>

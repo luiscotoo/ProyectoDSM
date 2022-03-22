@@ -22,4 +22,15 @@
         android:name="sv.edu.udb.medone.ui.servicios.ServiciosFragment"
         android:label="@string/menu_servicios"
         tools:layout="@layout/fragment_servicios" />
+
+    <fragment
+        android:id="@+id/nav_ordenes"
+        android:name="sv.edu.udb.medone.ui.ordenes.OrdenesFragment"
+        android:label="@string/menu_ordenes"
+        tools:layout="@layout/fragment_ordenes" />
+    <fragment
+        android:id="@+id/nav_acercade"
+        android:name="sv.edu.udb.medone.ui.acercade.AcercadeFragment"
+        android:label="fragment_acercade"
+        tools:layout="@layout/fragment_acercade" />
 </navigation>
