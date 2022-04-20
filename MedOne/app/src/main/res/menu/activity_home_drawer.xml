@@ -24,5 +24,9 @@
             android:id="@+id/nav_acercade"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_acercade" />
+        <item
+            android:id="@+id/homePrincipal"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/homeprincipal" />
     </group>
 </menu>

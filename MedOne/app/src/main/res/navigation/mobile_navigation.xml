@@ -33,4 +33,9 @@
         android:name="sv.edu.udb.medone.ui.acercade.AcercadeFragment"
         android:label="fragment_acercade"
         tools:layout="@layout/fragment_acercade" />
+    <activity
+        android:id="@+id/homePrincipal"
+        android:name="sv.edu.udb.medone.HomePrincipal"
+        android:label="activity_home_principal"
+        tools:layout="@layout/activity_home_principal" />
 </navigation>
