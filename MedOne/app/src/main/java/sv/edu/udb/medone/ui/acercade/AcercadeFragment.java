@@ -13,7 +13,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import sv.edu.udb.medone.databinding.FragmentAcercadeBinding;
-import sv.edu.udb.medone.ui.acercade.AcercadeViewModel;
 
 public class AcercadeFragment extends Fragment {
 
