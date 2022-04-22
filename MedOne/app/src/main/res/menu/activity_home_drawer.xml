@@ -28,5 +28,9 @@
             android:id="@+id/homePrincipal"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/homeprincipal" />
+        <item
+            android:id="@+id/serviciosPrincipal"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/serviciosPrincipal" />
     </group>
 </menu>

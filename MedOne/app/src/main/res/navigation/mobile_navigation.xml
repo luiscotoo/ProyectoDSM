@@ -38,4 +38,9 @@
         android:name="sv.edu.udb.medone.HomePrincipal"
         android:label="activity_home_principal"
         tools:layout="@layout/activity_home_principal" />
+    <activity
+        android:id="@+id/serviciosPrincipal"
+        android:name="sv.edu.udb.medone.ServiciosPrincipal"
+        android:label="@string/serviciosPrincipal"
+        tools:layout="@layout/activity_servicios_principal" />
 </navigation>

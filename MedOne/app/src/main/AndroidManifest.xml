@@ -13,15 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedOne">
         <activity
+            android:name=".EditService"
+            android:exported="false" />
+        <activity
+            android:name=".AddService"
+            android:exported="false" />
+        <activity
+            android:name=".ServiciosPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".EditHomeActivity"
             android:exported="false" />
         <activity
             android:name=".HomePrincipal"
-            android:exported="true">
-
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".AddHomeActivity"
             android:exported="false" />
