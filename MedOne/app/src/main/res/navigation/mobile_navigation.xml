@@ -43,4 +43,9 @@
         android:name="sv.edu.udb.medone.ServiciosPrincipal"
         android:label="@string/serviciosPrincipal"
         tools:layout="@layout/activity_servicios_principal" />
+    <activity
+        android:id="@+id/productosPrincipal"
+        android:name="sv.edu.udb.medone.ProductosPrincipal"
+        android:label="Productos - Principal"
+        tools:layout="@layout/activity_productos_principal"/>
 </navigation>

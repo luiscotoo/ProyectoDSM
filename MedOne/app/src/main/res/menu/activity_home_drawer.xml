@@ -32,5 +32,9 @@
             android:id="@+id/serviciosPrincipal"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/serviciosPrincipal" />
+        <item
+            android:id="@+id/productosPrincipal"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Productos - Admin" />
     </group>
 </menu>

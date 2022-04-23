@@ -95,7 +95,7 @@ public class ProductosPrincipal extends AppCompatActivity {
             }
         });
     }
-    
+
     public void onProductClick(int position){
         displayBottomSheet(productRVModalArrayList.get(position));
     }
