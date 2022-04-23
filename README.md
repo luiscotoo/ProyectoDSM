@@ -1,8 +1,6 @@
 # Proyecto MedOne DSM
 Aplicacion desarollada en la materia DSM
 
-## Para comenzar :rocket:
-* [Documento - Primera Fase]
 
 ## Desarrolladores :pencil2:
 * **Luis Felipe Coto Arias (CA######)** - :octocat: [luiscotoo](https://github.com/luiscotoo)
