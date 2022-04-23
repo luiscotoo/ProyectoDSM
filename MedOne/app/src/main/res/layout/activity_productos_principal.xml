@@ -12,13 +12,15 @@
     <!--recycler view for our data-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVProductos"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/course_rv_item" />
 
     <!--progress bar for loading indicator-->
     <ProgressBar
-        android:id="@+id/idPBLoadingService"
+        android:id="@+id/idPBLoadingProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

@@ -49,11 +49,18 @@ public class ProductosPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_productos_principal);
         productRV=findViewById(R.id.idRVProductos);
         productRL=findViewById(R.id.idRLProductos);
-        loadingPB = findViewById(R.id.idPBLoading);
+        loadingPB = findViewById(R.id.idPBLoadingProduct);
         addProductFAB=findViewById(R.id.idFABAddProductos);
         firebaseDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
         productRVModalArrayList=new ArrayList<>();
+        addProductFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProductosPrincipal.this, AddProductos.class);
+                startActivity(i);
+            }
+        });
 
         databaseReference = firebaseDatabase.getReference("Product");
         productRVAdapter=new ProductRvAdapter(productRVModalArrayList,this,this::onProductClick);
@@ -160,7 +167,7 @@ public class ProductosPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // on below line we are opening our EditCourseActivity on below line.
-                Intent i = new Intent(ProductosPrincipal.this, EditService.class);
+                Intent i = new Intent(ProductosPrincipal.this, EditProductos.class);
                 // on below line we are passing our course modal
                 i.putExtra("product", modal);
                 startActivity(i);
