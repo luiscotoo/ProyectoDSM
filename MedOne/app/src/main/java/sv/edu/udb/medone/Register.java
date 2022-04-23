@@ -73,4 +73,9 @@ public class Register extends AppCompatActivity {
                 });
     }
 
+    public void Volver(View v){
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
 }

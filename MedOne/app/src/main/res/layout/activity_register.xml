@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2b2d42"
     tools:context=".Register">
 
     <TextView
@@ -13,51 +14,75 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="135dp"
         android:layout_marginEnd="120dp"
-        android:text="Registrarse en la aplicación"
+        android:textStyle="bold"
+        android:textColor="#edf2f4"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:text="Regístrate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etEmailR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="52dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="101dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Correo electrónico"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#edf2f4"
+        android:textColorHint="#edf2f4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloRegistro" />
 
     <EditText
         android:id="@+id/etPasswordR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="281dp"
+        android:layout_height="52dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="101dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textColor="#edf2f4"
+        android:textColorHint="#edf2f4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmailR" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="137dp"
+        android:layout_width="211dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="138dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#ef233c"
         android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordR" />
+
+    <Button
+        android:id="@+id/btnVolverR"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="99dp"
+        android:backgroundTint="#8D99AE"
+        android:onClick="Volver"
+        android:text="Volver"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordR" />
 </androidx.constraintlayout.widget.ConstraintLayout>
