@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -64,7 +65,7 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
 
         databaseReference = firebaseDatabase.getReference("Product");
         productRVAdapter=new ProductRvAdapter(productRVModalArrayList,this,this::onProductClick);
-        productRV.setLayoutManager(new GridLayoutManager(this,2));
+        productRV.setLayoutManager(new LinearLayoutManager(this));
         productRV.setAdapter(productRVAdapter);
         getProduct();
     }
