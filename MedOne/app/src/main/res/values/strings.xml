@@ -39,4 +39,32 @@
     <string name="idTVCourseDesc">Description</string>
     <string name="idTVCoursePrice">Price</string>
     <string name="idBtnEditCourse">Edit event</string>
+
+
+    <!-- Add Home -->
+    <string name="idEdtCourseName">Event Name</string>
+    <string name="idEdtCoursePrice">Price</string>
+    <string name="idEdtSuitedFor">Restrictions</string>
+    <string name="idEdtCourseImageLink">Image Link</string>
+    <string name="idEdtCourseLink">Event Link</string>
+    <string name="idEdtCourseDescription">Description</string>
+    <string name="idBtnAddCourse">Add Event</string>
+
+    <!-- Edit Home -->
+    <string name="idBtnUpdateCourse">Update \n Event</string>
+    <string name="idBtnDeleteCourse">Delete \n Event</string>
+
+    <!-- Fragment_acercade -->
+    <string name="tvAcercaParrafo">MedOne was designed to provide an easy alternative when acquiring medical products of your preference including a huge spectrum of medicines and health services to improve your health care.</string>
+    <string name="tvAcercaVersion">Version 1.0</string>
+    <string name="tvNombreCoto">•	Luis Felipe Coto Arias</string>
+    <string name="tvNombreChaves">•	Josué Alexander Chávez García </string>
+    <string name="tvNombreDaya">•	Katherine Dayanna Díaz Zúniga </string>
+    <string name="tvNombreBryan">•	Bryan Armando Salinas Sánchez </string>
+    <string name="tvNombreJosue">•	Josué David Avelar Ponce </string>
+    <string name="tvAcercaTeam">Developer team:</string>
+    <string name="tvAcercaDerechos">All rights reserved</string>
+
+
+
 </resources>

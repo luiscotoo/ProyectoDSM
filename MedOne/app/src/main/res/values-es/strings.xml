@@ -41,5 +41,28 @@
     <string name="idTVCoursePrice">Precio</string>
     <string name="idBtnEditCourse">Editar evento</string>
 
+    <!-- Add Home -->
+    <string name="idEdtCourseName">Nombre del evento</string>
+    <string name="idEdtCoursePrice">Precio</string>
+    <string name="idEdtSuitedFor">Restricciones</string>
+    <string name="idEdtCourseImageLink">Link de la Imagen</string>
+    <string name="idEdtCourseLink">Link del evento</string>
+    <string name="idEdtCourseDescription">Descripcion</string>
+    <string name="idBtnAddCourse">Ingresar Evento</string>
+
+    <!-- Edit Home -->
+    <string name="idBtnUpdateCourse">Actualizar el \n Evento</string>
+    <string name="idBtnDeleteCourse">Borrar el \n Evento</string>
+
+    <!-- Fragment_acercade -->
+    <string name="tvAcercaParrafo">Aplicación MedOne creada para facilitar la compra en línea de tus productos médicos de tu preferencia con una amplia gama de medicamentos y servicios para un mejor cuido de tu salud.</string>
+    <string name="tvAcercaVersion">Version 1.0</string>
+    <string name="tvNombreCoto">•	Luis Felipe Coto Arias</string>
+    <string name="tvNombreChaves">•	Josué Alexander Chávez García </string>
+    <string name="tvNombreDaya">•	Katherine Dayanna Díaz Zúniga </string>
+    <string name="tvNombreBryan">•	Bryan Armando Salinas Sánchez </string>
+    <string name="tvNombreJosue">•	Josué David Avelar Ponce </string>
+    <string name="tvAcercaTeam">Equipo de desarrollo:</string>
+    <string name="tvAcercaDerechos">Todos los derechos reservados</string>
 
 </resources>
