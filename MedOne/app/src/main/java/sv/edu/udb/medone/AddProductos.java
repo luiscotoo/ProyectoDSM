@@ -30,7 +30,7 @@ public class AddProductos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_productos);
-        addProductBtn = findViewById(R.id.idBtnAddProduct);
+        addProductBtn = findViewById(R.id.idBtnAEditProduct);
         productNameEdt = findViewById(R.id.idEdtProductName);
         productDescEdt = findViewById(R.id.idEdtProductDescription);
         productPriceEdt = findViewById(R.id.idEdtProductPrice);

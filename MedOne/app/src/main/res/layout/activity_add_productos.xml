@@ -26,7 +26,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Nombre del evento"
+                android:hint="@string/idTILProductName"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Precio"
+                android:hint="@string/idTILProductPrice"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:boxStrokeColor="@color/purple_200"
@@ -80,7 +80,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Restricciones"
+                android:hint="@string/idTILProductSuitedFor"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -106,7 +106,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link de la imagen"
+                android:hint="@string/idTILProductImageLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -132,7 +132,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link del evento"
+                android:hint="@string/idTILProductLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Descripción"
+                android:hint="@string/idTILProductDescription"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -178,7 +178,7 @@
 
             <!--button for adding a new course-->
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/idBtnAddProduct"
+                android:id="@+id/idBtnAEditProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -186,10 +186,10 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_back"
-                android:textColor="@color/white"
-                android:text="Ingresar Evento"
                 android:backgroundTint="@color/black_shade_2"
-                android:textAllCaps="false" />
+                android:text="@string/idBtnAddProduct"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>

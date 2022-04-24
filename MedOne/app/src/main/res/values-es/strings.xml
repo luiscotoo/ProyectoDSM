@@ -40,6 +40,16 @@
     <string name="idTVCourseDesc">Descripcion</string>
     <string name="idTVCoursePrice">Precio</string>
     <string name="idBtnEditCourse">Editar evento</string>
+    <!--   Pantallas de productos   -->
+    <string name="idTILProductName">Nombre del producto</string>
+    <string name="idTILProductPrice">Precio</string>
+    <string name="idTILProductSuitedFor">Restricciones</string>
+    <string name="idTILProductImageLink">Link de la imagen</string>
+    <string name="idTILProductLink">Link del producto</string>
+    <string name="idTILProductDescription">Descripcion</string>
+    <string name="idBtnAddProduct">Agregar producto</string>
+    <string name="idBtnDeleteProduct">Borrar producto</string>
+    <string name="idBtnAEditProduct">Editar producto</string>
 
 
 </resources>
