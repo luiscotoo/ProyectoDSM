@@ -92,14 +92,14 @@ public class EditProductos extends AppCompatActivity {
                         // adding a map to our database.
                         databaseReference.updateChildren(map);
                         // on below line we are displaying a toast message.
-                        Toast.makeText(EditProductos.this, "Se ha actualizado el producto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProductos.this, getResources().getString(R.string.ExitosoEditProductos), Toast.LENGTH_SHORT).show();
                         // opening a new activity after updating our coarse.
                         startActivity(new Intent(EditProductos.this, ProductosPrincipal.class));
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(EditProductos.this, "Error al actualizar el producto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProductos.this, getResources().getString(R.string.FallidoEditProductos), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -115,7 +115,7 @@ public class EditProductos extends AppCompatActivity {
         // on below line calling a method to delete the course.
         databaseReference.removeValue();
         // displaying a toast message on below line.
-        Toast.makeText(this, "Se ha borrado el producto", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.ExitosoDeleteProductos), Toast.LENGTH_SHORT).show();
         // opening a main activity on below line.
         startActivity(new Intent(EditProductos.this, ProductosPrincipal.class));
     }

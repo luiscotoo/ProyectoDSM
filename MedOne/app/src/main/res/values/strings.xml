@@ -77,6 +77,67 @@
     <string name="tvAcercaTeam">Developer team:</string>
     <string name="tvAcercaDerechos">All rights reserved</string>
 
+    <!-- Login -->
+    <string name="tvBienvenida">Welcome to MedOne</string>
+    <string name="tvTituloLogin">Log in</string>
+    <string name="etEmail">Email</string>
+    <string name="tvPreguntaCuenta">¿No account?</string>
+    <string name="etPassword">Password</string>
+    <string name="btnIngresar">Log in</string>
+    <string name="btnRegistrarse">Register</string>
+
+    <!-- Register -->
+    <string name="tvTituloRegistro">Create an account</string>
+    <string name="etEmailR">Email</string>
+    <string name="btnVolverR">Go back</string>
+    <string name="etPasswordR">Password</string>
+
+    <!-- Activity Add Home -->
+    <string name="ExitosoAddHome">The event has been added to home</string>
+    <string name="FallidoAddHome">Error while adding to home</string>
+
+    <!-- Activity Add Productos -->
+    <string name="ExitosoAddProductos">Product Added</string>
+    <string name="FallidoAddProductos">Error while adding to products</string>
+
+    <!-- Activity Add Service -->
+    <string name="ExitosoAddServicios">Service Added</string>
+    <string name="FallidoAddServicios">Error while adding to services</string>
+
+    <!-- Activity Edit Home -->
+    <string name="ExitosoEditHome">Event Updated</string>
+    <string name="FallidoEditHome">Error while updating event</string>
+    <string name="ExitosoDeleteHome">Event deleted</string>
+
+    <!-- Activity Edit Productos -->
+    <string name="ExitosoEditProductos">Product Updated</string>
+    <string name="FallidoEditProductos">Error while updating product</string>
+    <string name="ExitosoDeleteProductos">Product deleted</string>
+
+    <!-- Activity Edit Servicios -->
+    <string name="ExitosoEditServicios">Service Updated</string>
+    <string name="FallidoEditServicios">Error while updating service</string>
+    <string name="ExitosoDeleteServicios">Service deleted</string>
+
+    <!-- Activity Home principal -->
+    <string name="LogOutHomeP">User Logged Out</string>
+    <string name="RegresandoMenu">Going to menu...</string>
+    <string name="RestriccionesHomeP">Restrictions </string>
+
+    <!-- Activity Login -->
+    <string name="WarningEmail">Please enter email...</string>
+    <string name="WarningPassword">Please enter password!</string>
+    <string name="ExitosoLogin">Login Successful</string>
+    <string name="FallidoLogin">Login Failed, Please try again</string>
+
+    <!-- Activity Register -->
+    <string name="ExitosoRegister">Registration successful!</string>
+    <string name="FallidoRegister">Registration failed! Please try again later</string>
+
+    <!-- menu_main -->
+    <string name="LogOutOptionMenu">Log Out</string>
+    <string name="GoBackOptionMenu">Go Back to Menu</string>
+
 
 
 

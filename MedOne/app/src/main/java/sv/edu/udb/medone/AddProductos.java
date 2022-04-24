@@ -63,7 +63,7 @@ public class AddProductos extends AppCompatActivity {
                         // on below line we are setting data in our firebase database.
                         databaseReference.child(productID).setValue(productRVModal);
                         // displaying a toast message.
-                        Toast.makeText(AddProductos.this, "Se ha agregado el evento a productos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddProductos.this, getResources().getString(R.string.ExitosoAddProductos), Toast.LENGTH_SHORT).show();
                         // starting a main activity.
                         startActivity(new Intent(AddProductos.this, HomePrincipal.class));
                     }
@@ -71,7 +71,7 @@ public class AddProductos extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         // displaying a failure message on below line.
-                        Toast.makeText(AddProductos.this, "Error al agregar a Productos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddProductos.this, getResources().getString(R.string.FallidoAddProductos), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

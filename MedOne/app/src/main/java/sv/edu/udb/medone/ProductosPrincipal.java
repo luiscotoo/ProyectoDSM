@@ -114,12 +114,21 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
         switch (id) {
             case R.id.idLogOut:
                 // displaying a toast message on user logged out inside on click.
-                Toast.makeText(getApplicationContext(), "User Logged Out", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.LogOutHomeP), Toast.LENGTH_LONG).show();
                 // on below line we are signing out our user.
                 mAuth.signOut();
                 // on below line we are opening our login activity.
                 Intent i = new Intent(ProductosPrincipal.this, Login.class);
                 startActivity(i);
+                this.finish();
+                return true;
+            case R.id.idMenuOptions:
+                // displaying a toast message on user logged out inside on click.
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
+                // on below line we are signing out our user.
+                // on below line we are opening our login activity.
+                Intent llamar = new Intent(ProductosPrincipal.this, HomeActivity.class);
+                startActivity(llamar);
                 this.finish();
                 return true;
             default:
@@ -157,7 +166,7 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
         // on below line we are setting data to different views on below line.
         serviceNameTV.setText(modal.getProductName());
         serviceDescTV.setText(modal.getProductDescription());
-        serviceForTV.setText("Restricciones " + modal.getProductRestrictions());
+        serviceForTV.setText(getResources().getString(R.string.RestriccionesHomeP)+": " + modal.getProductRestrictions());
         serviceTV.setText("$" + modal.getProductPrice());
         Picasso.get().load(modal.getProductImg()).into(serviceIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);

@@ -97,7 +97,7 @@ public class EditHomeActivity extends AppCompatActivity {
                         // adding a map to our database.
                         databaseReference.updateChildren(map);
                         // on below line we are displaying a toast message.
-                        Toast.makeText(EditHomeActivity.this, "Se ha actualizado el evento", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditHomeActivity.this, getResources().getString(R.string.ExitosoEditHome), Toast.LENGTH_SHORT).show();
                         // opening a new activity after updating our coarse.
                         startActivity(new Intent(EditHomeActivity.this, HomePrincipal.class));
                     }
@@ -105,7 +105,7 @@ public class EditHomeActivity extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         // displaying a failure message on toast.
-                        Toast.makeText(EditHomeActivity.this, "Error al actualizar evento", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditHomeActivity.this, getResources().getString(R.string.FallidoEditHome), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -126,7 +126,7 @@ public class EditHomeActivity extends AppCompatActivity {
         // on below line calling a method to delete the course.
         databaseReference.removeValue();
         // displaying a toast message on below line.
-        Toast.makeText(this, "Se ha borrado el evento", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.ExitosoDeleteHome), Toast.LENGTH_SHORT).show();
         // opening a main activity on below line.
         startActivity(new Intent(EditHomeActivity.this, HomePrincipal.class));
     }
