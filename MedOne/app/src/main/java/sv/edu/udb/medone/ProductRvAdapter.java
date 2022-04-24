@@ -25,6 +25,7 @@ public class ProductRvAdapter extends RecyclerView.Adapter<ProductRvAdapter.View
     private ArrayList<ProductRvModal> productRvModalArrayList;
     private ProductClickInterface productClickInterface;
     int lastPosition=-1;
+
     public ProductRvAdapter(ArrayList<ProductRvModal> productRvModalArrayList,Context context, ProductClickInterface productClickInterface){
         this.productRvModalArrayList=productRvModalArrayList;
         this.productClickInterface=productClickInterface;
@@ -42,8 +43,9 @@ public class ProductRvAdapter extends RecyclerView.Adapter<ProductRvAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ProductRvModal productRvModal= productRvModalArrayList.get(position);
         holder.productTV.setText(productRvModal.getProductName());
-        holder.prductPriceTV.setText(productRvModal.getProductPrice());
+        holder.productPriceTV.setText(productRvModal.getProductPrice());
         Picasso.get().load(productRvModal.getProductImg()).into(holder.productIV);
+
         setAnimation(holder.itemView,position);
         holder.productIV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,14 +68,15 @@ public class ProductRvAdapter extends RecyclerView.Adapter<ProductRvAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private ImageView productIV;
-        private TextView productTV, prductPriceTV;
+        private TextView productTV, productPriceTV;
        public ViewHolder(@NonNull View itemView) {
            super(itemView);
            productIV= itemView.findViewById(R.id.idIVCourse);
            productTV=itemView.findViewById(R.id.idTVCOurseName);
-           prductPriceTV=itemView.findViewById(R.id.idTVCoursePrice);
+           productPriceTV=itemView.findViewById(R.id.idTVCousePrice);
        }
    }
-   public interface ProductClickInterface{void onProductClick(int position);}
-
+   public interface ProductClickInterface{
+        void onProductClick(int position);
+    }
 }

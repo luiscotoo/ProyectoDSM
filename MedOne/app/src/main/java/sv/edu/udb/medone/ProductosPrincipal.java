@@ -32,7 +32,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class ProductosPrincipal extends AppCompatActivity {
+public class ProductosPrincipal extends AppCompatActivity implements ProductRvAdapter.ProductClickInterface{
     private FloatingActionButton addProductFAB;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
