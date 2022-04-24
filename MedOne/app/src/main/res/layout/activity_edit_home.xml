@@ -26,7 +26,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Nombre del evento"
+                android:hint="@string/idEdtCourseName"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Precio"
+                android:hint="@string/idEdtCoursePrice"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:boxStrokeColor="@color/purple_200"
@@ -80,7 +80,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Restricciones"
+                android:hint="@string/idEdtSuitedFor"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -106,7 +106,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link de la imagen"
+                android:hint="@string/idEdtCourseImageLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -132,7 +132,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link del evento"
+                android:hint="@string/idEdtCourseLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Descripción"
+                android:hint="@string/idEdtCourseDescription"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -184,7 +184,7 @@
 
                 <!--button for updating a new course-->
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/idBtnAddCourse"
+                    android:id="@+id/idBtnUpdateCourse"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -195,7 +195,7 @@
                     android:background="@drawable/button_back"
                     android:backgroundTint="@color/black_shade_2"
                     android:textColor="@color/white"
-                    android:text="Actualizar el \n Evento"
+                    android:text="@string/idBtnUpdateCourse"
                     android:textAllCaps="false" />
 
                 <!--button for deleting a course-->
@@ -211,7 +211,7 @@
                     android:background="@drawable/button_back"
                     android:backgroundTint="@color/black_shade_2"
                     android:textColor="@color/white"
-                    android:text="Borrar el \n Evento"
+                    android:text="@string/idBtnDeleteCourse"
                     android:textAllCaps="false" />
 
             </LinearLayout>

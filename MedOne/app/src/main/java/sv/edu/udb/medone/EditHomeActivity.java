@@ -37,7 +37,7 @@ public class EditHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_home);
         // initializing all our variables on below line.
-        Button addHomeBtn = findViewById(R.id.idBtnAddCourse);
+        Button addHomeBtn = findViewById(R.id.idBtnUpdateCourse);
         homeNameEdt = findViewById(R.id.idEdtCourseName);
         homeDescEdt = findViewById(R.id.idEdtCourseDescription);
         homePriceEdt = findViewById(R.id.idEdtCoursePrice);
