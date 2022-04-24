@@ -7,13 +7,28 @@
     android:background="#2b2d42"
     tools:context=".ui.acercade.AcercadeFragment">
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="27dp"
+        android:text="Todos los derechos reservados"
+        android:textColor="#8D99AE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:visibility="visible" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="124dp"
         android:layout_height="122dp"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="72dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,15 +36,16 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="27dp"
         android:text="Version 1.0"
-        android:textSize="16sp"
         android:textColor="#8D99AE"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible" />
 
     <TextView
@@ -122,18 +138,32 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="350dp"
-        android:layout_height="145dp"
+        android:layout_width="351dp"
+        android:layout_height="170dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="26dp"
+        android:background="@drawable/style_bordes"
         android:text="Aplicación MedOne creada para facilitar la compra en línea de tus productos médicos de tu presencia con una amplia gama de medicamentos y servicios para un mejor cuido de tu salud."
         android:textAlignment="center"
-        android:textSize="20sp"
         android:textColor="#edf2f4"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/TextMargen"
+        android:layout_width="355dp"
+        android:layout_height="302dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="31dp"
+        android:background="@drawable/style_bordes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
