@@ -3,7 +3,7 @@ Aplicacion desarollada en la materia DSM
 
 
 ## Desarrolladores :pencil2:
-* **Luis Felipe Coto Arias (CA######)** - :octocat: [luiscotoo](https://github.com/luiscotoo)
+* **Luis Felipe Coto Arias (CA180315)** - :octocat: [luiscotoo](https://github.com/luiscotoo)
 * **Bryan Armando Salinas Sanchez - SS180731** - :octocat: [BassMan14](https://github.com/BassMan14)
 * **Katherine Dayanna Diaz Zúniga - D2180675** - :octocat: [Usuario](https://github.com/Dayandz)
 * **Josué David Avelar Ponce - AP172038** - :octocat: [Usuario](https://github.com/JosueAvelar)
