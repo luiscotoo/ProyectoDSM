@@ -183,6 +183,8 @@
                 android:weightSum="2">
 
                 <!--button for updating a new course-->
+
+                <!--button for deleting a course-->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/idBtnAddService"
                     android:layout_width="0dp"
@@ -194,11 +196,10 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_back"
                     android:backgroundTint="@color/black_shade_2"
-                    android:textColor="@color/white"
-                    android:text="Actualizar el \n Servicio"
-                    android:textAllCaps="false" />
+                    android:text="@string/idBtnAddService"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
-                <!--button for deleting a course-->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/idBtnDeleteService"
                     android:layout_width="0dp"
@@ -210,9 +211,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_back"
                     android:backgroundTint="@color/black_shade_2"
-                    android:textColor="@color/white"
-                    android:text="Borrar el \n Servicio"
-                    android:textAllCaps="false" />
+                    android:text="@string/idBtnDeleteService"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
         </LinearLayout>

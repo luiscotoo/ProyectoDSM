@@ -1,17 +1,20 @@
 <resources>
     <string name="app_name">MedOne</string>
-    <string name="navigation_drawer_open">Abrir barra lateral</string>
-    <string name="navigation_drawer_close">Cerrar barra lateral</string>
+    <string name="navigation_drawer_open">Open sidebar</string>
+    <string name="navigation_drawer_close">Close sidebar</string>
     <string name="nav_header_title">MedOne</string>
-    <string name="nav_header_subtitle">Tu farmacia de confianza</string>
+    <string name="nav_header_subtitle">Your favorite pharmacy</string>
     <string name="nav_header_desc">MedOne</string>
-    <string name="action_settings">Información</string>
+    <string name="action_settings">Information</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_productos">Productos</string>
-    <string name="menu_servicios">Servicios</string>
-    <string name="menu_ordenes">Ordenes</string>
-    <string name="menu_acercade">Acerca de</string>
+    <string name="menu_productos">Products</string>
+    <string name="menu_servicios">Services</string>
+    <string name="menu_ordenes">Orders</string>
+    <string name="menu_acercade">About us</string>
     <string name="homeprincipal">Home - Admin</string>
-    <string name="serviciosPrincipal">Servicios - Admin</string>
+    <string name="serviciosPrincipal">Services - Admin</string>
+    <string name="productosPrincipal">Products - Admin</string>
+    <string name="idBtnAddService">Update service</string>
+    <string name="idBtnDeleteService">Delete service</string>
 </resources>
