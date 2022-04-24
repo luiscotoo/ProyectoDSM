@@ -34,7 +34,7 @@ public class EditService extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_service);
         // initializing all our variables on below line.
-        Button addServiceBtn = findViewById(R.id.idBtnAddService);
+        Button addServiceBtn = findViewById(R.id.idBtnUpdateService);
         serviceNameEdt = findViewById(R.id.idEdtServiceName);
         serviceDescEdt = findViewById(R.id.idEdtServiceDescription);
         servicePriceEdt = findViewById(R.id.idEdtServicePrice);

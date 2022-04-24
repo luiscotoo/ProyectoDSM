@@ -29,7 +29,7 @@ public class AddService extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_service);
-        addServiceBtn=findViewById(R.id.idBtnAddService);
+        addServiceBtn=findViewById(R.id.idBtnUpdateService);
         serviceNameEdt=findViewById(R.id.idEdtServiceName);
         serviceDescEdt=findViewById(R.id.idEdtServiceDescription);
         servicePriceEdt=findViewById(R.id.idEdtServicePrice);

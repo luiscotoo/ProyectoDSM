@@ -26,7 +26,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Nombre del Servicio"
+                android:hint="@string/idEdtServiceName"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Precio"
+                android:hint="@string/idEdtServicePrice"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:boxStrokeColor="@color/purple_200"
@@ -80,7 +80,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Restricciones"
+                android:hint="@string/idTILServiceSuitedFor"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -106,7 +106,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link de la imagen"
+                android:hint="@string/idTILServiceImageLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -132,7 +132,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Link del servicio"
+                android:hint="@string/idTILServiceLink"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Descripción"
+                android:hint="@string/idTILServiceDescription"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -186,7 +186,7 @@
 
                 <!--button for deleting a course-->
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/idBtnAddService"
+                    android:id="@+id/idBtnUpdateService"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -196,7 +196,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_back"
                     android:backgroundTint="@color/black_shade_2"
-                    android:text="@string/idBtnAddService"
+                    android:text="@string/idBtnUpdateService"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
 

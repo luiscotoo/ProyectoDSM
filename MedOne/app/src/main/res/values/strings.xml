@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">Your favorite pharmacy</string>
     <string name="nav_header_desc">MedOne</string>
     <string name="action_settings">Information</string>
-
+    <!--    Sidebar   -->
     <string name="menu_home">Home</string>
     <string name="menu_productos">Products</string>
     <string name="menu_servicios">Services</string>
@@ -15,6 +15,28 @@
     <string name="homeprincipal">Home - Admin</string>
     <string name="serviciosPrincipal">Services - Admin</string>
     <string name="productosPrincipal">Products - Admin</string>
-    <string name="idBtnAddService">Update service</string>
+    <!--    Pantallas de servicio   -->
+    <string name="idBtnAddService">Add service</string>
     <string name="idBtnDeleteService">Delete service</string>
+    <string name="idEdtServiceName">Service name</string>
+    <string name="idEdtServicePrice">Price</string>
+    <string name="idTILServiceSuitedFor">Restrictions</string>
+    <string name="idTILServiceImageLink">Image link</string>
+    <string name="idTILServiceLink">Service link</string>
+    <string name="idTILServiceDescription">Description</string>
+    <string name="idTILServiceName">Service name</string>
+    <string name="idTILServicePrice">Price</string>
+    <string name="idEdtServiceImageLink">Image link</string>
+    <string name="idBtnUpdateService">Update service</string>
+    <!--   Ventanas onclick   -->
+    <string name="idTVServiceName">Name service</string>
+    <string name="idTVServiceDesc">Description</string>
+    <string name="idTVSuitedFor">Restrictions</string>
+    <string name="idTVServicePrice">Price</string>
+    <string name="idBtnEditService">Edit service</string>
+    <string name="idBtnVIewDetails"> Go to link</string>
+    <string name="idTVCourseName">Service name</string>
+    <string name="idTVCourseDesc">Description</string>
+    <string name="idTVCoursePrice">Price</string>
+    <string name="idBtnEditCourse">Edit event</string>
 </resources>

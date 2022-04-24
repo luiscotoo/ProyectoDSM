@@ -17,7 +17,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="3dp"
         android:padding="4dp"
-        android:text="Nombre del servicio"
+        android:text="@string/idTVServiceName"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -39,11 +39,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVServiceName"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toEndOf="@id/idIVService"
         android:layout_toRightOf="@id/idIVService"
         android:padding="3dp"
-        android:text="Descripción"
+        android:text="@string/idTVServiceDesc"
         android:textColor="@color/white" />
 
     <!--text view for displaying course best suited for-->
@@ -52,10 +55,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVServiceDesc"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toRightOf="@id/idIVService"
         android:padding="3dp"
-        android:text="Restricciones"
+        android:text="@string/idTVSuitedFor"
         android:textColor="@color/white" />
 
     <!--text view for displaying course price-->
@@ -64,10 +70,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVSuitedFor"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toRightOf="@id/idIVService"
         android:padding="3dp"
-        android:text="Precio"
+        android:text="@string/idTVServicePrice"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -87,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Editar Servicio"
+            android:text="@string/idBtnEditService"
             android:backgroundTint="@color/black_shade_2"
             android:textAllCaps="false" />
 
@@ -95,11 +104,11 @@
         <Button
             android:id="@+id/idBtnVIewDetails"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="43dp"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Ver link"
             android:backgroundTint="@color/black_shade_2"
+            android:text=" Link"
             android:textAllCaps="false" />
 
     </LinearLayout>

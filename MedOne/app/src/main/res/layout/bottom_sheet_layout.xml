@@ -12,9 +12,12 @@
         android:id="@+id/idTVCourseName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
         android:padding="4dp"
-        android:text="Nombre del evento"
+        android:text="@string/idTVCourseName"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -36,11 +39,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVCourseName"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toEndOf="@id/idIVCourse"
         android:layout_toRightOf="@id/idIVCourse"
         android:padding="3dp"
-        android:text="Descripción"
+        android:text="@string/idTVCourseDesc"
         android:textColor="@color/white" />
 
     <!--text view for displaying course best suited for-->
@@ -49,10 +55,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVCourseDesc"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toRightOf="@id/idIVCourse"
         android:padding="3dp"
-        android:text="Restricciones"
+        android:text="@string/idTVSuitedFor"
         android:textColor="@color/white" />
 
     <!--text view for displaying course price-->
@@ -61,10 +70,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVSuitedFor"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_toRightOf="@id/idIVCourse"
         android:padding="3dp"
-        android:text="Precio"
+        android:text="@string/idTVCoursePrice"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -84,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Editar Evento"
+            android:text="@string/idBtnEditCourse"
             android:backgroundTint="@color/black_shade_2"
             android:textAllCaps="false" />
 
@@ -95,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Ver link"
+            android:text="Link"
             android:backgroundTint="@color/black_shade_2"
             android:textAllCaps="false" />
 
