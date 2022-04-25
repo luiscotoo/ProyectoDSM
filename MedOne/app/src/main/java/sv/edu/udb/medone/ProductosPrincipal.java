@@ -144,26 +144,17 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
         return true;
     }
     private void displayBottomSheet(ProductRvModal modal) {
-        // on below line we are creating our bottom sheet dialog.
         final BottomSheetDialog bottomSheetTeachersDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
-        // on below line we are inflating our layout file for our bottom sheet.
         View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_service, productRL,false);
-        // setting content view for bottom sheet on below line.
         bottomSheetTeachersDialog.setContentView(layout);
-        // on below line we are setting a cancelable
         bottomSheetTeachersDialog.setCancelable(false);
         bottomSheetTeachersDialog.setCanceledOnTouchOutside(true);
-        // calling a method to display our bottom sheet.
         bottomSheetTeachersDialog.show();
-        // on below line we are creating variables for
-        // our text view and image view inside bottom sheet
-        // and initialing them with their ids.
         TextView serviceNameTV = layout.findViewById(R.id.idTVServiceName);
         TextView serviceDescTV = layout.findViewById(R.id.idTVServiceDesc);
         TextView serviceForTV = layout.findViewById(R.id.idTVSuitedFor);
         TextView serviceTV = layout.findViewById(R.id.idTVServicePrice);
         ImageView serviceIV = layout.findViewById(R.id.idIVService);
-        // on below line we are setting data to different views on below line.
         serviceNameTV.setText(modal.getProductName());
         serviceDescTV.setText(modal.getProductDescription());
         serviceForTV.setText(getResources().getString(R.string.RestriccionesHomeP)+": " + modal.getProductRestrictions());
