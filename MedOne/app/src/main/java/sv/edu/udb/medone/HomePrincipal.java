@@ -139,12 +139,21 @@ public class HomePrincipal extends AppCompatActivity implements HomeRVAdapter.Ho
         switch (id) {
             case R.id.idLogOut:
                 // displaying a toast message on user logged out inside on click.
-                Toast.makeText(getApplicationContext(), "User Logged Out", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.LogOutHomeP), Toast.LENGTH_LONG).show();
                 // on below line we are signing out our user.
                 mAuth.signOut();
                 // on below line we are opening our login activity.
                 Intent i = new Intent(HomePrincipal.this, Login.class);
                 startActivity(i);
+                this.finish();
+                return true;
+            case R.id.idMenuOptions:
+                // displaying a toast message on user logged out inside on click.
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
+                // on below line we are signing out our user.
+                // on below line we are opening our login activity.
+                Intent llamar = new Intent(HomePrincipal.this, HomeActivity.class);
+                startActivity(llamar);
                 this.finish();
                 return true;
             default:
@@ -183,7 +192,7 @@ public class HomePrincipal extends AppCompatActivity implements HomeRVAdapter.Ho
         // on below line we are setting data to different views on below line.
         homeNameTV.setText(modal.getHomeName());
         homeDescTV.setText(modal.getHomeDescription());
-        homeForTV.setText("Restricciones " + modal.getHomeRestrictions());
+        homeForTV.setText(getResources().getString(R.string.RestriccionesHomeP)+": "+ modal.getHomeRestrictions());
         homeTV.setText("$" + modal.getHomePrice());
         Picasso.get().load(modal.getHomeImg()).into(homeIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);

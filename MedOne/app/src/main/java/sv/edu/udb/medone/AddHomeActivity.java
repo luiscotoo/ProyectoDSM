@@ -67,7 +67,7 @@ public class AddHomeActivity extends AppCompatActivity {
                         // on below line we are setting data in our firebase database.
                         databaseReference.child(homeID).setValue(homeRVModal);
                         // displaying a toast message.
-                        Toast.makeText(AddHomeActivity.this, "Se ha agregado el evento a home", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddHomeActivity.this, getResources().getString(R.string.ExitosoAddHome), Toast.LENGTH_SHORT).show();
                         // starting a main activity.
                         startActivity(new Intent(AddHomeActivity.this, HomePrincipal.class));
                     }
@@ -75,7 +75,7 @@ public class AddHomeActivity extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         // displaying a failure message on below line.
-                        Toast.makeText(AddHomeActivity.this, "Error al agregar a Home", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddHomeActivity.this, getResources().getString(R.string.FallidoAddHome), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

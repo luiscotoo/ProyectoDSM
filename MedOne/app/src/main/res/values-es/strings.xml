@@ -75,4 +75,66 @@
     <string name="tvAcercaTeam">Equipo de desarrollo:</string>
     <string name="tvAcercaDerechos">Todos los derechos reservados</string>
 
+    <!-- Login -->
+    <string name="tvBienvenida">Bienvenido a MedOne</string>
+    <string name="tvTituloLogin">Ingresa a la aplicación</string>
+    <string name="etEmail">Correo electrónico</string>
+    <string name="tvPreguntaCuenta">¿Aún no tienes una cuenta?</string>
+    <string name="etPassword">Contraseña</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnRegistrarse">Registrarse</string>
+
+    <!-- Register -->
+    <string name="tvTituloRegistro">Regístrate</string>
+    <string name="etEmailR">Correo electrónico</string>
+    <string name="btnVolverR">Volver</string>
+    <string name="etPasswordR">Contraseña</string>
+
+    <!-- Activity Add Home -->
+    <string name="ExitosoAddHome">Se ha agregado el evento a home</string>
+    <string name="FallidoAddHome">Error al agregar a Home</string>
+
+    <!-- Activity Add Productos -->
+    <string name="ExitosoAddProductos">Se ha agregado el producto</string>
+    <string name="FallidoAddProductos">Error al agregar a Productos</string>
+
+    <!-- Activity Add Service -->
+    <string name="ExitosoAddServicios">Se ha agregado el servicio</string>
+    <string name="FallidoAddServicios">Error al agregar a Servicios</string>
+
+    <!-- Activity Edit Home -->
+    <string name="ExitosoEditHome">Se ha actualizado el evento</string>
+    <string name="FallidoEditHome">Error al actualizar evento</string>
+    <string name="ExitosoDeleteHome">Se ha borrado el evento</string>
+
+    <!-- Activity Edit Productos -->
+    <string name="ExitosoEditProductos">Se ha actualizado el producto</string>
+    <string name="FallidoEditProductos">Error al actualizar producto</string>
+    <string name="ExitosoDeleteProductos">Se ha borrado el producto</string>
+
+    <!-- Activity Edit Servicios -->
+    <string name="ExitosoEditServicios">Se ha actualizado el servicio</string>
+    <string name="FallidoEditServicios">Error al actualizar servicio</string>
+    <string name="ExitosoDeleteServicios">Se ha borrado el servicio</string>
+
+    <!-- Activity Home principal -->
+    <string name="LogOutHomeP">Se ha cerrado sesión</string>
+    <string name="RegresandoMenu">Regresando a menú</string>
+    <string name="RestriccionesHomeP">Restricciones </string>
+
+    <!-- Activity Login -->
+    <string name="WarningEmail">Por favor ingrese un correo...</string>
+    <string name="WarningPassword">Ingrese una contraseña</string>
+    <string name="ExitosoLogin">Ingreso Exitoso!</string>
+    <string name="FallidoLogin">Ingreso Fallido, inténtelo de nuevo</string>
+
+    <!-- Activity Register -->
+    <string name="ExitosoRegister">Registro Exitoso!</string>
+    <string name="FallidoRegister">Registro Fallido, inténtelo de nuevo</string>
+
+    <!-- menu_main -->
+    <string name="LogOutOptionMenu">Cerrar Sesión</string>
+    <string name="GoBackOptionMenu">Volver al Menú</string>
+
+
 </resources>

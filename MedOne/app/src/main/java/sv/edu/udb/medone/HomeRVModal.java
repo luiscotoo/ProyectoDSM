@@ -49,8 +49,6 @@ public class HomeRVModal implements Parcelable {
             return new HomeRVModal[size];
         }
     };
-
-    // creating getter and setter methods.
     public String getHomeName() {
         return homeName;
     }

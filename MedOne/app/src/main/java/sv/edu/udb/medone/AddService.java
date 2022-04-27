@@ -63,14 +63,14 @@ public class AddService extends AppCompatActivity {
                         // on below line we are setting data in our firebase database.
                         databaseReference.child(serviceID).setValue(serviceRVModal);
                         // displaying a toast message.
-                        Toast.makeText(AddService.this, "Se ha agregado el servicio", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddService.this, getResources().getString(R.string.ExitosoAddServicios), Toast.LENGTH_SHORT).show();
                         // starting a main activity.
                         startActivity(new Intent(AddService.this, ServiciosPrincipal.class));
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(AddService.this, "Error al agregar a servicios", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddService.this, getResources().getString(R.string.FallidoAddServicios), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -92,14 +92,14 @@ public class EditService extends AppCompatActivity {
                         // adding a map to our database.
                         databaseReference.updateChildren(map);
                         // on below line we are displaying a toast message.
-                        Toast.makeText(EditService.this, "Se ha actualizado el servicio", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditService.this, getResources().getString(R.string.ExitosoEditServicios), Toast.LENGTH_SHORT).show();
                         // opening a new activity after updating our coarse.
                         startActivity(new Intent(EditService.this, ServiciosPrincipal.class));
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(EditService.this, "Error al actualizar el servicio", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditService.this, getResources().getString(R.string.FallidoEditServicios), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -116,7 +116,7 @@ public class EditService extends AppCompatActivity {
         // on below line calling a method to delete the course.
         databaseReference.removeValue();
         // displaying a toast message on below line.
-        Toast.makeText(this, "Se ha borrado el servicio", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.ExitosoDeleteServicios), Toast.LENGTH_SHORT).show();
         // opening a main activity on below line.
         startActivity(new Intent(EditService.this, ServiciosPrincipal.class));
     }
