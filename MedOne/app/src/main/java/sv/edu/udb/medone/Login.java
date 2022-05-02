@@ -85,11 +85,11 @@ public class Login extends AppCompatActivity {
                                         String level = snapshot.child("userIsUser").getValue().toString();
                                         if(Objects.equals(level,"1")){
                                             //Es usuario normal
-                                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                            Intent intent = new Intent(getApplicationContext(), HomePrincipal.class);
                                             startActivity(intent);
                                         }else{
                                             //Es administrador
-                                            Intent intent = new Intent(getApplicationContext(),HomePrincipal.class);
+                                            Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
                                             startActivity(intent);
                                         }
                                     }
