@@ -157,7 +157,7 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
         ImageView productIV = layout.findViewById(R.id.idIVProduct);
         productNameTV.setText(modal.getProductName());
         productDescTV.setText(modal.getProductDescription());
-        productForTV.setText(getResources().getString(R.string.RestriccionesHomeP)+": " + modal.getProductRestrictions());
+        productForTV.setText("Restrictions"+": " + modal.getProductRestrictions());
         productTV.setText("$" + modal.getProductPrice());
         Picasso.get().load(modal.getProductImg()).into(productIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);

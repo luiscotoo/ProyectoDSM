@@ -14,24 +14,25 @@ public class ProductRvModal implements Parcelable{
 
     protected ProductRvModal(Parcel in){
         productName=in.readString();
-        productPrice=in.readString();
         productDescription=in.readString();
         productRestrictions=in.readString();
         productImg=in.readString();
-        productLink=in.readString();
         productId=in.readString();
+        productPrice=in.readString();
+        productLink=in.readString();
     }
     public ProductRvModal (){
 
     }
     public ProductRvModal(String productName, String productPrice, String productDescription, String productRestrictions, String productImg, String productLink, String productId){
         this.productName=productName;
-        this.productPrice=productPrice;
         this.productDescription=productDescription;
         this.productRestrictions=productRestrictions;
         this.productImg=productImg;
-        this.productLink=productLink;
         this.productId=productId;
+        this.productPrice=productPrice;
+        this.productLink=productLink;
+
     }
 
     public String getProductName() {
@@ -98,11 +99,11 @@ public class ProductRvModal implements Parcelable{
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(productName);
-        parcel.writeString(productPrice);
         parcel.writeString(productDescription);
         parcel.writeString(productRestrictions);
-        parcel.writeString(productId);
         parcel.writeString(productImg);
+        parcel.writeString(productId);
+        parcel.writeString(productPrice);
         parcel.writeString(productLink);
 
     }
