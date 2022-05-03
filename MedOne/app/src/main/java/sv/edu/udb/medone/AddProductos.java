@@ -54,7 +54,7 @@ public class AddProductos extends AppCompatActivity {
                 String productLink = productLinkEdt.getText().toString();
                 productID = productName;
                 // on below line we are passing all data to our modal class.
-                ProductRvModal productRVModal = new ProductRvModal(productID, productName, productDesc, productPrice, productRestrictions, productImg, productLink);
+                ProductRvModal productRVModal = new ProductRvModal(productName, productDesc,productRestrictions, productImg,productID,productPrice, productLink);
                 // on below line we are calling a add value event
                 // to pass data to firebase database.
                 databaseReference.addValueEventListener(new ValueEventListener() {
