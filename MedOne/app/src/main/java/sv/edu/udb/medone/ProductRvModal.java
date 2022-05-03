@@ -24,7 +24,7 @@ public class ProductRvModal implements Parcelable{
     public ProductRvModal (){
 
     }
-    public ProductRvModal(String productName, String productPrice, String productDescription, String productRestrictions, String productImg, String productLink, String productId){
+    public ProductRvModal(String productName, String productDescription, String productRestrictions, String productImg, String productId, String productPrice, String productLink){
         this.productName=productName;
         this.productDescription=productDescription;
         this.productRestrictions=productRestrictions;
@@ -43,20 +43,20 @@ public class ProductRvModal implements Parcelable{
         this.productName = productName;
     }
 
-    public String getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(String productPrice) {
-        this.productPrice = productPrice;
-    }
-
     public String getProductDescription() {
         return productDescription;
     }
 
     public void setProductDescription(String productDescription) {
         this.productDescription = productDescription;
+    }
+
+    public String getProductRestrictions() {
+        return productRestrictions;
+    }
+
+    public void setProductRestrictions(String productRestrictions) {
+        this.productRestrictions = productRestrictions;
     }
 
     public String getProductImg() {
@@ -75,20 +75,20 @@ public class ProductRvModal implements Parcelable{
         this.productId = productId;
     }
 
+    public String getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
+
     public String getProductLink() {
         return productLink;
     }
 
     public void setProductLink(String productLink) {
         this.productLink = productLink;
-    }
-
-    public String getProductRestrictions() {
-        return productRestrictions;
-    }
-
-    public void setProductRestrictions(String productRestrictions) {
-        this.productRestrictions = productRestrictions;
     }
 
     @Override
