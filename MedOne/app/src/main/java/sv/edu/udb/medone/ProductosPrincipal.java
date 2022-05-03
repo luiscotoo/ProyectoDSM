@@ -145,23 +145,23 @@ public class ProductosPrincipal extends AppCompatActivity implements ProductRvAd
     }
     private void displayBottomSheet(ProductRvModal modal) {
         final BottomSheetDialog bottomSheetTeachersDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
-        View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_service, productRL,false);
+        View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_products, productRL,false);
         bottomSheetTeachersDialog.setContentView(layout);
         bottomSheetTeachersDialog.setCancelable(false);
         bottomSheetTeachersDialog.setCanceledOnTouchOutside(true);
         bottomSheetTeachersDialog.show();
-        TextView serviceNameTV = layout.findViewById(R.id.idTVServiceName);
-        TextView serviceDescTV = layout.findViewById(R.id.idTVServiceDesc);
-        TextView serviceForTV = layout.findViewById(R.id.idTVSuitedFor);
-        TextView serviceTV = layout.findViewById(R.id.idTVServicePrice);
-        ImageView serviceIV = layout.findViewById(R.id.idIVService);
-        serviceNameTV.setText(modal.getProductName());
-        serviceDescTV.setText(modal.getProductDescription());
-        serviceForTV.setText(getResources().getString(R.string.RestriccionesHomeP)+": " + modal.getProductRestrictions());
-        serviceTV.setText("$" + modal.getProductPrice());
-        Picasso.get().load(modal.getProductImg()).into(serviceIV);
+        TextView productNameTV = layout.findViewById(R.id.idTVProductName);
+        TextView productDescTV = layout.findViewById(R.id.idTVProductDesc);
+        TextView productForTV = layout.findViewById(R.id.idTVSuitedFor);
+        TextView productTV = layout.findViewById(R.id.idTVProductPrice);
+        ImageView productIV = layout.findViewById(R.id.idIVProduct);
+        productNameTV.setText(modal.getProductName());
+        productDescTV.setText(modal.getProductDescription());
+        productForTV.setText("Restrictions"+": " + modal.getProductRestrictions());
+        productTV.setText("$" + modal.getProductPrice());
+        Picasso.get().load(modal.getProductImg()).into(productIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
-        Button editBtn = layout.findViewById(R.id.idBtnEditService);
+        Button editBtn = layout.findViewById(R.id.idBtnEditProduct);
 
         // adding on click listener for our edit button.
         editBtn.setOnClickListener(new View.OnClickListener() {

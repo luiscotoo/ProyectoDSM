@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRLBSheetProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_shade_1"
+    android:padding="4dp">
+
+    <!--text view for displaying course name-->
+    <TextView
+        android:id="@+id/idTVProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:padding="4dp"
+        android:text="@string/idTILProductName"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--image view for displaying course image-->
+    <ImageView
+        android:id="@+id/idIVProduct"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/idTVProductName"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!--text view for displaying course description-->
+    <TextView
+        android:id="@+id/idTVProductDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVProductName"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/idIVProduct"
+        android:layout_toRightOf="@id/idIVProduct"
+        android:padding="3dp"
+        android:text="@string/idTVServiceDesc"
+        android:textColor="@color/white" />
+
+    <!--text view for displaying course best suited for-->
+    <TextView
+        android:id="@+id/idTVSuitedFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVProductDesc"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/idIVProduct"
+        android:padding="3dp"
+        android:text="@string/idTILProductSuitedFor"
+        android:textColor="@color/white" />
+
+    <!--text view for displaying course price-->
+    <TextView
+        android:id="@+id/idTVProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVSuitedFor"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/idIVProduct"
+        android:padding="3dp"
+        android:text="@string/idTILProductPrice"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVProductPrice"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--button for editing course-->
+        <Button
+            android:id="@+id/idBtnEditProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="@string/idBtnAEditProduct"
+            android:backgroundTint="@color/black_shade_2"
+            android:textAllCaps="false" />
+
+        <!--button for viewing course details-->
+        <Button
+            android:id="@+id/idBtnVIewDetails"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black_shade_2"
+            android:text=" Link"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>
