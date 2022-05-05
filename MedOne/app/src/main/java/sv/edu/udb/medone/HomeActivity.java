@@ -1,12 +1,21 @@
 package sv.edu.udb.medone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -14,12 +23,17 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 import sv.edu.udb.medone.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
+    private FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
+    Boolean admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +41,8 @@ public class HomeActivity extends AppCompatActivity {
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        Intent intent=getIntent();
+        mAuth = FirebaseAuth.getInstance();
         setSupportActionBar(binding.appBarHome.toolbar);
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,8 +51,32 @@ public class HomeActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        String uid = mAuth.getCurrentUser().getUid().toString();
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        databaseReference.child("Users").child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    String level = snapshot.child("userIsUser").getValue().toString();
+                    if(Objects.equals(level,"1")){
+                        //Es usuario normal
+                        navigationView.getMenu().clear();
+                        navigationView.inflateMenu(R.menu.activity_home_drawer);
+                    }else{
+                        //Es administrador
+                        navigationView.getMenu().clear();
+                        navigationView.inflateMenu(R.menu.activity_home_drawer_admin);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

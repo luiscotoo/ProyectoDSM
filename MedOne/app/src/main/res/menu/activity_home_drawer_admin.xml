@@ -24,5 +24,17 @@
             android:id="@+id/nav_acercade"
             android:icon="@drawable/ic_acercade_sidebar"
             android:title="@string/menu_acercade" />
+        <item
+            android:id="@+id/homePrincipal"
+            android:icon="@drawable/ic_home_sidebar"
+            android:title="@string/homeprincipal" />
+        <item
+            android:id="@+id/serviciosPrincipal"
+            android:icon="@drawable/ic_servicios_sidebar"
+            android:title="@string/serviciosPrincipal" />
+        <item
+            android:id="@+id/productosPrincipal"
+            android:icon="@drawable/ic_productos_sidebar"
+            android:title="Productos - Admin" />
     </group>
 </menu>
