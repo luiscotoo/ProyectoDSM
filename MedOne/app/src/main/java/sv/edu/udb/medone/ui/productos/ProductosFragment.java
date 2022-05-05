@@ -27,6 +27,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,6 +45,7 @@ public class ProductosFragment extends Fragment {
     private FragmentProductosBinding binding;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    DatabaseReference cartReference;
     private RecyclerView productRV;
     private FirebaseAuth mAuth;
     private ProgressBar loadingPB;
@@ -65,6 +67,7 @@ public class ProductosFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         productRVModalArrayList=new ArrayList<>();
         databaseReference = firebaseDatabase.getReference("Product");
+        cartReference=firebaseDatabase.getReference("Cart");
         productRVAdapter=new ProductRvAdapter(productRVModalArrayList,getContext(),this::onProductClick);
         productRV.setLayoutManager(new LinearLayoutManager(getContext()));
         productRV.setAdapter(productRVAdapter);
@@ -111,23 +114,51 @@ public class ProductosFragment extends Fragment {
     }
     private void displayBottomSheet(ProductRvModal modal) {
         final BottomSheetDialog bottomSheetTeachersDialog = new BottomSheetDialog(getContext(), R.style.BottomSheetDialogTheme);
-        View layout = LayoutInflater.from(getContext()).inflate(R.layout.bottom_sheet_service_home, productRL,false);
+        View layout = LayoutInflater.from(getContext()).inflate(R.layout.bottom_sheet_products, productRL,false);
         bottomSheetTeachersDialog.setContentView(layout);
         bottomSheetTeachersDialog.setCancelable(false);
         bottomSheetTeachersDialog.setCanceledOnTouchOutside(true);
         bottomSheetTeachersDialog.show();
-        TextView productNameTV = layout.findViewById(R.id.idTVServiceName);
-        TextView productDescTV = layout.findViewById(R.id.idTVServiceDesc);
+        TextView productNameTV = layout.findViewById(R.id.idTVProductName);
+        TextView productDescTV = layout.findViewById(R.id.idTVProductDesc);
         TextView productForTV = layout.findViewById(R.id.idTVSuitedFor);
-        TextView productTV = layout.findViewById(R.id.idTVServicePrice);
-        ImageView productIV = layout.findViewById(R.id.idIVService);
+        TextView productTV = layout.findViewById(R.id.idTVProductPrice);
+        ImageView productIV = layout.findViewById(R.id.idIVProduct);
         productNameTV.setText(modal.getProductName());
         productDescTV.setText(modal.getProductDescription());
         productForTV.setText("Restrictions"+": " + modal.getProductRestrictions());
         productTV.setText("$" + modal.getProductPrice());
         Picasso.get().load(modal.getProductImg()).into(productIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
+        Button AddtoCarrito = layout.findViewById(R.id.idBtnEditProduct);
+        AddtoCarrito.setText("Agregar al carrito");
+        String userid= mAuth.getUid();
+        // adding on click listener for our edit button.
+        AddtoCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                cartReference.child(userid).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        CartModal cartModal = snapshot.getValue(CartModal.class);
+                        ArrayList<ProductRvModal> productRvModalArrayList= cartModal.getProductRvModalArrayList();
+                        productRvModalArrayList.add(modal);
+                        Float total= Float.parseFloat(modal.getProductPrice()+ cartModal.getTotal());
+                        Integer cantidad= productRvModalArrayList.size()+1;
+                        cartModal.setCantidad(cantidad);
+                        cartModal.setProductRvModalArrayList(productRvModalArrayList);
+                        cartModal.setTotal(total);
+                        cartReference.child(userid).setValue(cartModal);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
         // adding click listener for our view button on below line.
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,6 +168,7 @@ public class ProductosFragment extends Fragment {
                 startActivity(i);
             }
         });
+
     }
 
     @Override
