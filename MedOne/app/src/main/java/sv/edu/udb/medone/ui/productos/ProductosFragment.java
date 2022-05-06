@@ -3,6 +3,7 @@ package sv.edu.udb.medone.ui.productos;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -31,6 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import sv.edu.udb.medone.EditProductos;
 import sv.edu.udb.medone.ProductRvAdapter;
@@ -137,24 +141,43 @@ public class ProductosFragment extends Fragment {
         AddtoCarrito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                cartReference.child(userid).addValueEventListener(new ValueEventListener() {
+                cartReference.child(userid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        CartModal cartModal = snapshot.getValue(CartModal.class);
-                        ArrayList<ProductRvModal> productRvModalArrayList= cartModal.getProductRvModalArrayList();
-                        productRvModalArrayList.add(modal);
-                        Float total= Float.parseFloat(modal.getProductPrice()+ cartModal.getTotal());
-                        Integer cantidad= productRvModalArrayList.size()+1;
-                        cartModal.setCantidad(cantidad);
-                        cartModal.setProductRvModalArrayList(productRvModalArrayList);
-                        cartModal.setTotal(total);
-                        cartReference.child(userid).setValue(cartModal);
-                    }
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(!task.isSuccessful()){
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                        }
+                        else{
+                            CartModal cartModal = task.getResult().getValue(CartModal.class);
+                            if(cartModal != null){
+                                Log.i("AAAAAAAAAAAA", cartModal.toString());
+                                ProductRvModal[] vacio = {modal};
+                                ArrayList<ProductRvModal> productRvModalArrayList;
+                                if(!cartModal.getProductRvModalArrayList().isEmpty()){
+                                    productRvModalArrayList = cartModal.getProductRvModalArrayList();
+                                    productRvModalArrayList.add(modal);
+                                }
+                                else {
+                                    productRvModalArrayList = new ArrayList<ProductRvModal>(Arrays.asList(vacio));
+                                }
 
+                                Float total= Float.parseFloat(modal.getProductPrice())+ cartModal.getTotal();
+                                Integer cantidad= productRvModalArrayList.size();
+                                cartModal.setCantidad(cantidad);
+                                cartModal.setProductRvModalArrayList(productRvModalArrayList);
+                                cartModal.setTotal(total);
+                                cartReference.child(userid).setValue(cartModal);
+                            }
+                            else{
+                                ProductRvModal[] vacio = {modal};
+                                ArrayList<ProductRvModal> productRvModalArrayList;
+                                productRvModalArrayList = new ArrayList<ProductRvModal>(Arrays.asList(vacio));
+                                Float total= Float.parseFloat(modal.getProductPrice());
+                                Integer cantidad= productRvModalArrayList.size();
+                                cartModal = new CartModal(userid, productRvModalArrayList, total, cantidad);
+                                cartReference.child(userid).setValue(cartModal);
+                            }
+                        }
                     }
                 });
             }

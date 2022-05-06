@@ -52,7 +52,6 @@
     <string name="idBtnAEditProduct">Edit product</string>
 
 
-
     <!-- Add Home -->
     <string name="idEdtCourseName">Event Name</string>
     <string name="idEdtCoursePrice">Price</string>
@@ -137,8 +136,6 @@
     <!-- menu_main -->
     <string name="LogOutOptionMenu">Log Out</string>
     <string name="GoBackOptionMenu">Go Back to Menu</string>
-
-
 
 
 </resources>
