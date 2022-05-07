@@ -34,12 +34,16 @@ public class ShoppingCart extends AppCompatActivity {
     private ArrayList<ProductRvModal> productRVModalArrayList;
     private ProductRvAdapter productRVAdapter;
     private RelativeLayout productRL;
+    private TextView totalPrecio;
+    private Button comprar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
         productRL = findViewById(R.id.SCRl);
+        totalPrecio= findViewById(R.id.totalPrecio);
+        comprar= findViewById(R.id.comprar);
         databaseReference = firebaseDatabase.getReference("Product");
         cartReference=firebaseDatabase.getReference("Cart");
         mAuth = FirebaseAuth.getInstance();
@@ -51,7 +55,7 @@ public class ShoppingCart extends AppCompatActivity {
     private void getProduct(){
         productRVModalArrayList.clear();
         String iduser = mAuth.getUid();
-        databaseReference.child(iduser).child("productRvModalArrayList").addChildEventListener(new ChildEventListener() {
+        cartReference.child(iduser).child("productRvModalArrayList").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 productRVModalArrayList.add(snapshot.getValue(ProductRvModal.class));
