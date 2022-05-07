@@ -2,8 +2,10 @@ package sv.edu.udb.medone;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -91,8 +93,37 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // adding a click listener for option selected on below line.
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.idLogOut:
+                // displaying a toast message on user logged out inside on click.
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.LogOutHomeP), Toast.LENGTH_LONG).show();
+                // on below line we are signing out our user.
+                mAuth.signOut();
+                // on below line we are opening our login activity.
+                Intent i = new Intent(getApplicationContext(), Login.class);
+                startActivity(i);
+                this.finish();
+                return true;
+            case R.id.idMenuOptions:
+                // displaying a toast message on user logged out inside on click.
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
+                // on below line we are signing out our user.
+                // on below line we are opening our login activity.
+                Intent llamar = new Intent(getApplicationContext(), PagoActivity.class);
+                startActivity(llamar);
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

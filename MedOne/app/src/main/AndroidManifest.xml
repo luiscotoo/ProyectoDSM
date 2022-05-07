@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedOne">
         <activity
+            android:name=".PagoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ShoppingCart"
             android:exported="false" />
         <activity

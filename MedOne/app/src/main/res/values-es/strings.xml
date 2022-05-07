@@ -134,7 +134,12 @@
 
     <!-- menu_main -->
     <string name="LogOutOptionMenu">Cerrar Sesión</string>
-    <string name="GoBackOptionMenu">Volver al Menú</string>
+    <string name="GoBackOptionMenu">Prueba Pago</string>
+
+    <!-- Activity Pago -->
+    <string name="BtnPay">Realizar Pago</string>
+    <string name="tvTituloPago">Confirmación de compra</string>
+    <string name="tvDescripcionPago">Monto a pagar</string>
 
 
 </resources>

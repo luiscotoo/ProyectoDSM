@@ -135,7 +135,12 @@
 
     <!-- menu_main -->
     <string name="LogOutOptionMenu">Log Out</string>
-    <string name="GoBackOptionMenu">Go Back to Menu</string>
+    <string name="GoBackOptionMenu">Test Payment</string>
+
+    <!-- Activity Pago -->
+    <string name="BtnPay">Make Payment</string>
+    <string name="tvTituloPago">Payment Confirmation</string>
+    <string name="tvDescripcionPago">Amount to pay</string>
 
 
 </resources>

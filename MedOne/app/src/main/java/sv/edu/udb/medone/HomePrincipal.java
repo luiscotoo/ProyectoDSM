@@ -152,7 +152,7 @@ public class HomePrincipal extends AppCompatActivity implements HomeRVAdapter.Ho
                 Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
                 // on below line we are signing out our user.
                 // on below line we are opening our login activity.
-                Intent llamar = new Intent(HomePrincipal.this, HomeActivity.class);
+                Intent llamar = new Intent(HomePrincipal.this, PagoActivity.class);
                 startActivity(llamar);
                 this.finish();
                 return true;
