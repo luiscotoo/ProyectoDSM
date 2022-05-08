@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Open sidebar</string>
     <string name="navigation_drawer_close">Close sidebar</string>
     <string name="nav_header_title">MedOne</string>
-    <string name="nav_header_subtitle">Your favorite pharmacy</string>
+    <string name="nav_header_subtitle">Your favourite pharmacy</string>
     <string name="nav_header_desc">MedOne</string>
     <string name="action_settings">Information</string>
     <!--    Sidebar   -->
