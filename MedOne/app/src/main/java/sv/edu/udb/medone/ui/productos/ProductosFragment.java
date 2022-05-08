@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +37,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import sv.edu.udb.medone.AddProductos;
 import sv.edu.udb.medone.EditProductos;
 import sv.edu.udb.medone.ProductRvAdapter;
 import sv.edu.udb.medone.ProductRvModal;
@@ -177,6 +179,8 @@ public class ProductosFragment extends Fragment {
                                 cartModal = new CartModal(userid, productRvModalArrayList, total, cantidad);
                                 cartReference.child(userid).setValue(cartModal);
                             }
+                            bottomSheetTeachersDialog.cancel();
+                            Toast.makeText(getContext(), getResources().getString(R.string.ExitosoAgregarCarrito), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

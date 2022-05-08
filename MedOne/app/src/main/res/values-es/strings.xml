@@ -146,5 +146,8 @@
     <string name="tvTituloCarrito">Carrito de compras</string>
     <string name="btnComprar">Pagar</string>
 
+    <!-- Fragment Productos -->
+    <string name="ExitosoAgregarCarrito">Producto agregado a carrito</string>
+
 
 </resources>
