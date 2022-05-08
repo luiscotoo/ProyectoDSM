@@ -147,15 +147,6 @@ public class HomePrincipal extends AppCompatActivity implements HomeRVAdapter.Ho
                 startActivity(i);
                 this.finish();
                 return true;
-            case R.id.idMenuOptions:
-                // displaying a toast message on user logged out inside on click.
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
-                // on below line we are signing out our user.
-                // on below line we are opening our login activity.
-                Intent llamar = new Intent(HomePrincipal.this, PagoActivity.class);
-                startActivity(llamar);
-                this.finish();
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

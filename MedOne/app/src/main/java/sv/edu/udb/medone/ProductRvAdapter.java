@@ -43,7 +43,7 @@ public class ProductRvAdapter extends RecyclerView.Adapter<ProductRvAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ProductRvModal productRvModal= productRvModalArrayList.get(position);
         holder.productTV.setText(productRvModal.getProductName());
-        holder.productPriceTV.setText(productRvModal.getProductPrice());
+        holder.productPriceTV.setText("$"+productRvModal.getProductPrice());
         Picasso.get().load(productRvModal.getProductImg()).into(holder.productIV);
 
         setAnimation(holder.itemView,position);

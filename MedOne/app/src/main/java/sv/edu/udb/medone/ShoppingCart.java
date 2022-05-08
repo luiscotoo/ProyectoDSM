@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import sv.edu.udb.medone.ui.productos.CartModal;
 
@@ -39,10 +41,10 @@ public class ShoppingCart extends AppCompatActivity {
     private RecyclerView productRV;
     private ArrayList<ProductRvModal> productRVModalArrayList;
     private ProductRvAdapter productRVAdapter;
-    private RelativeLayout productRL;
+    private ConstraintLayout productRL;
     private TextView totalPrecio;
     private Button comprar;
-    private Float cantidad;
+    private double cantidad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,7 @@ public class ShoppingCart extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),PagoActivity.class);
-                intent.putExtra("cantidad",cantidad);
+                intent.putExtra("cantidad",String.valueOf(cantidad));
                 startActivity(intent);
             }
         });
@@ -74,7 +76,8 @@ public class ShoppingCart extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
-                    totalPrecio.setText("Precio: $ "+ snapshot.getValue().toString());
+                    cantidad = snapshot.getValue(Double.class);
+                    totalPrecio.setText(String.format(Locale.US,"Total: $%.2f",cantidad));
                 }
             }
 

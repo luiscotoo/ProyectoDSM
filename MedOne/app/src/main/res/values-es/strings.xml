@@ -141,5 +141,10 @@
     <string name="tvTituloPago">Confirmación de compra</string>
     <string name="tvDescripcionPago">Monto a pagar</string>
 
+    <!-- Activity Carrito -->
+    <string name="tvPagoDefault">Total: $00.00</string>
+    <string name="tvTituloCarrito">Carrito de compras</string>
+    <string name="btnComprar">Pagar</string>
+
 
 </resources>

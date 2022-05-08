@@ -12,7 +12,11 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
@@ -23,8 +27,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class PagoActivity extends AppCompatActivity {
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference cartReference;
+    private FirebaseAuth mAuth;
+    private ArrayList<ProductRvModal> productRVModalArrayList;
 
     public static final String clientKey = "AaqK0iCkGrAnbs9PzsMPe554c0yF1Zr2nohAFaK6p6z1-LqmxYns2esPlCfk9G5NbkR2y3lU0bYJmydQ";
     public static final int PAYPAL_REQUEST_CODE = 123;
@@ -39,18 +50,23 @@ public class PagoActivity extends AppCompatActivity {
             .clientId(clientKey);
     private TextView tvAmount;
     private TextView paymentTV;
-    private String cantidad;
+    private double cantidad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pago);
 
-        cantidad = getIntent().getStringExtra("cantidad");
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        productRVModalArrayList = new ArrayList<>();
+        mAuth = FirebaseAuth.getInstance();
+
+        cantidad = Double.parseDouble(getIntent().getStringExtra("cantidad"));
+
 
         // on below line we are initializing our variables.
         tvAmount = findViewById(R.id.tvAmount);
-        tvAmount.setText("$"+cantidad);
+        tvAmount.setText(String.format(Locale.US,"$%.2f",cantidad));
 
         // creating a variable for button, edit text and status tv.
         Button makePaymentBtn = findViewById(R.id.idBtnPay);
@@ -62,14 +78,22 @@ public class PagoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // calling a method to get payment.
                 getPayment();
+                LimpiarCarrito();
             }
         });
+    }
+
+    private void LimpiarCarrito(){
+        String iduser = mAuth.getUid();
+        cartReference=firebaseDatabase.getReference("Cart").child(iduser);
+        cartReference.removeValue();
+
     }
 
     private void getPayment() {
 
         // Getting the amount from editText
-        String amount = cantidad;
+        String amount = String.valueOf(cantidad);
 
         // Creating a paypal payment on below line.
         PayPalPayment payment = new PayPalPayment(new BigDecimal(String.valueOf(amount)), "USD", "Course Fees",

@@ -7,17 +7,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logofondoblanco"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logofondoblanco"
         android:supportsRtl="true"
         android:theme="@style/Theme.MedOne">
         <activity
             android:name=".PagoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ShoppingCart"/>
         <activity
             android:name=".ShoppingCart"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"/>
         <activity
             android:name=".EditProductos"
             android:exported="false" />
@@ -26,7 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".ProductosPrincipal"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"/>
         <activity
             android:name=".EditService"
             android:exported="false" />
@@ -35,13 +38,15 @@
             android:exported="false" />
         <activity
             android:name=".ServiciosPrincipal"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"/>
         <activity
             android:name=".EditHomeActivity"
             android:exported="false" />
         <activity
             android:name=".HomePrincipal"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".HomeActivity"/>
         <activity
             android:name=".AddHomeActivity"
             android:exported="false" />

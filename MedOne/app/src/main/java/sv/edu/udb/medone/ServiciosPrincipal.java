@@ -144,15 +144,6 @@ public class ServiciosPrincipal extends AppCompatActivity implements ServiceRVAd
                 startActivity(i);
                 this.finish();
                 return true;
-            case R.id.idMenuOptions:
-                // displaying a toast message on user logged out inside on click.
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.RegresandoMenu), Toast.LENGTH_LONG).show();
-                // on below line we are signing out our user.
-                // on below line we are opening our login activity.
-                Intent llamar = new Intent(ServiciosPrincipal.this, HomeActivity.class);
-                startActivity(llamar);
-                this.finish();
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
