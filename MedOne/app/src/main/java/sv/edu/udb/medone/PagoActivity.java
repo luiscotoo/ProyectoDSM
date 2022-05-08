@@ -46,10 +46,7 @@ public class PagoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pago);
 
-        //cantidad = getIntent().getStringExtra("cantidad");
-
-        //mientras no este el carrito
-        cantidad = "25";
+        cantidad = getIntent().getStringExtra("cantidad");
 
         // on below line we are initializing our variables.
         tvAmount = findViewById(R.id.tvAmount);

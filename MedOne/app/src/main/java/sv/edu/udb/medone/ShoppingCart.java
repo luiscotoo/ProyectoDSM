@@ -2,11 +2,15 @@ package sv.edu.udb.medone;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -21,13 +25,15 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import sv.edu.udb.medone.ui.productos.CartModal;
+
 public class ShoppingCart extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
     DatabaseReference cartReference;
     private FirebaseAuth mAuth;
     private RecyclerView productRV;
@@ -36,26 +42,53 @@ public class ShoppingCart extends AppCompatActivity {
     private RelativeLayout productRL;
     private TextView totalPrecio;
     private Button comprar;
+    private Float cantidad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
+        productRV = findViewById(R.id.idRVShoping);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        productRVModalArrayList = new ArrayList<>();
         productRL = findViewById(R.id.SCRl);
         totalPrecio= findViewById(R.id.totalPrecio);
         comprar= findViewById(R.id.comprar);
-        databaseReference = firebaseDatabase.getReference("Product");
         cartReference=firebaseDatabase.getReference("Cart");
         mAuth = FirebaseAuth.getInstance();
         productRVAdapter=new ProductRvAdapter(productRVModalArrayList,this,this::onProductClick);
         productRV.setLayoutManager(new LinearLayoutManager(this));
         productRV.setAdapter(productRVAdapter);
+
+        comprar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),PagoActivity.class);
+                intent.putExtra("cantidad",cantidad);
+                startActivity(intent);
+            }
+        });
         getProduct();
+        String iduser = mAuth.getUid();
+        cartReference.child(iduser).child("total").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    Log.i("AYUDAAA", snapshot.getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
     private void getProduct(){
         productRVModalArrayList.clear();
         String iduser = mAuth.getUid();
         cartReference.child(iduser).child("productRvModalArrayList").addChildEventListener(new ChildEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 productRVModalArrayList.add(snapshot.getValue(ProductRvModal.class));
@@ -86,6 +119,18 @@ public class ShoppingCart extends AppCompatActivity {
     public void onProductClick(int position){
         displayBottomSheet(productRVModalArrayList.get(position));
     }
+
+   public void AsignarCantidad(ProductRvModal p){
+        cantidad = cantidad + Float.parseFloat(p.getProductPrice());
+
+       for (int i=0; i<productRVModalArrayList.size();i++){
+           cantidad = cantidad + Float.parseFloat(productRVModalArrayList.get(i).getProductPrice());
+       }
+       totalPrecio.setText("Total: $"+ cantidad);
+   }
+
+
+
     private void displayBottomSheet(ProductRvModal modal){
         final BottomSheetDialog bottomSheetTeachersDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
         View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_products, productRL,false);

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
     tools:context=".ShoppingCart"
     android:id="@+id/SCRl">
 
@@ -13,16 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Carrito de Compras"
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@id/idRVCourses"
+        app:layout_constraintEnd_toEndOf="@id/idRVShoping"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!--recycler view for our data-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVCourses"
-        android:layout_width="wrap_content"
-        android:layout_height="575dp"
+        android:id="@+id/idRVShoping"
+        android:layout_width="match_parent"
+        android:layout_height="491dp"
         android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,28 +33,28 @@
 
     <TextView
         android:id="@+id/totalPrecio"
-        android:layout_width="117dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/idRVCourses"
+        android:layout_width="196dp"
+        android:layout_height="83dp"
+        android:layout_below="@+id/idRVShoping"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="42dp"
-        android:layout_marginBottom="41dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="122dp"
         android:text="TextView"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@id/idRVCourses"
+        app:layout_constraintEnd_toEndOf="@id/idRVShoping"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/comprar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/idRVCourses"
+        android:layout_width="191dp"
+        android:layout_height="82dp"
+        android:layout_below="@+id/idRVShoping"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="124dp"
         android:text="Comprar" />
 
 </RelativeLayout>
