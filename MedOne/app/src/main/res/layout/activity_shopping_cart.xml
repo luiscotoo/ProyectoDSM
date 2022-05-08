@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/comprar"
         android:layout_width="191dp"
-        android:layout_height="82dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/idRVShoping"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

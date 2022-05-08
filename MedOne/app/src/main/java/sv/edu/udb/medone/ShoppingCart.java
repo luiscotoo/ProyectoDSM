@@ -74,7 +74,7 @@ public class ShoppingCart extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
-                    Log.i("AYUDAAA", snapshot.getValue().toString());
+                    totalPrecio.setText("Precio: $ "+ snapshot.getValue().toString());
                 }
             }
 
