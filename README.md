@@ -21,22 +21,22 @@ Para el correcto funcionamiento de la aplicación se necesita:
 ```
 ## Herramientas utilizadas :hammer_and_wrench: :computer:
 - Android Studio 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Android_Studio_Trademark.svg/1280px-Android_Studio_Trademark.svg.png" alt="css3" width="40" height="40"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Android_Studio_Trademark.svg/1280px-Android_Studio_Trademark.svg.png" alt="css3" width="200" height="60"/>
 
 - Visual Studio Code
-<img src="https://sobrebits.com/wp-content/uploads/2018/10/Visual-Studio-Code-para-PowerShell.png" alt="css3" width="40" height="40"/>
+<img src="https://sobrebits.com/wp-content/uploads/2018/10/Visual-Studio-Code-para-PowerShell.png" alt="css3" width="160" height="80"/>
 
 - Notion 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png?20200221181224" alt="css3" width="40" height="40"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png?20200221181224" alt="css3" width="80" height="80"/>
 
 - Figma
-<img src="https://vectorlogoseek.com/wp-content/uploads/2020/06/figma-vector-logo.png" alt="css3" width="40" height="40"/>
+<img src="https://vectorlogoseek.com/wp-content/uploads/2020/06/figma-vector-logo.png" alt="css3" width="120" height="100"/>
 
 - Github 
-<img src="https://logos-marcas.com/wp-content/uploads/2020/11/GitHub-Logo.png" alt="css3" width="40" height="40"/>
+<img src="https://logos-marcas.com/wp-content/uploads/2020/11/GitHub-Logo.png" alt="css3" width="140" height="100"/>
 
 - Java 
-<img src="https://1000marcas.net/wp-content/uploads/2020/11/Java-logo.png" alt="css3" width="40" height="40"/>
+<img src="https://1000marcas.net/wp-content/uploads/2020/11/Java-logo.png" alt="css3" width="125" height="100"/>
 
 ## Enlaces de interés :zap:
 * Pagina Web [Pagina](https://nifty-lalande-d9f589.netlify.app)🌐
