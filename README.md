@@ -20,18 +20,23 @@ Para el correcto funcionamiento de la aplicación se necesita:
   - Conexión a internet.
 ```
 ## Herramientas utilizadas :hammer_and_wrench: :computer:
- - Android Studio 
- ![Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Android_Studio_Trademark.svg/1280px-Android_Studio_Trademark.svg.png)
- - Visual Studio Code
- ![Logo](https://sobrebits.com/wp-content/uploads/2018/10/Visual-Studio-Code-para-PowerShell.png)
- - Notion 
- ![Logo](https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png?20200221181224)
- - Figma
- ![Logo](https://vectorlogoseek.com/wp-content/uploads/2020/06/figma-vector-logo.png)
- - Github 
- ![Logo](https://logos-marcas.com/wp-content/uploads/2020/11/GitHub-Logo.png)
- - Java 
- ![Logo](https://1000marcas.net/wp-content/uploads/2020/11/Java-logo.png)
+- Android Studio 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Android_Studio_Trademark.svg/1280px-Android_Studio_Trademark.svg.png" alt="css3" width="40" height="40"/>
+
+- Visual Studio Code
+<img src="https://sobrebits.com/wp-content/uploads/2018/10/Visual-Studio-Code-para-PowerShell.png" alt="css3" width="40" height="40"/>
+
+- Notion 
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png?20200221181224" alt="css3" width="40" height="40"/>
+
+- Figma
+<img src="https://vectorlogoseek.com/wp-content/uploads/2020/06/figma-vector-logo.png" alt="css3" width="40" height="40"/>
+
+- Github 
+<img src="https://logos-marcas.com/wp-content/uploads/2020/11/GitHub-Logo.png" alt="css3" width="40" height="40"/>
+
+- Java 
+<img src="https://1000marcas.net/wp-content/uploads/2020/11/Java-logo.png" alt="css3" width="40" height="40"/>
 
 ## Enlaces de interés :zap:
 * Pagina Web [Pagina](https://nifty-lalande-d9f589.netlify.app)🌐
