@@ -43,4 +43,4 @@ Para el correcto funcionamiento de la aplicación se necesita:
 * Notion [Tablero Notion](https://www.notion.so/8d66fd2dc5264b4fb29d4208a552a88f?v=a44eb700a99d4c87ba0533ba64cbaf41)🗃️
 * Manual de usuario [Manual de usuario](https://www.canva.com/design/DAEvFseDvbA/7mUBC2TSOpr_8DoMGZy2Jg/view?utm_content=DAEvFseDvbA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#1)✨
 * Manual Técnico [Enlace Manual Técnico](https://www.canva.com/design/DAEvAzRkKxM/0ETV8GJ_IikOAW5mvWK53w/view?utm_content=DAEvAzRkKxM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 👷
-* Video Fase II [Video](https://drive.google.com/file/d/1mURNVNpwgNN95YU212GyiACnb-kdUmBE/view) :movie_camera:
+
